@@ -1,0 +1,8 @@
+<h1>Listing all products</h1>
+
+<% @products.each do |p| %>
+  <h4><%=p.title%></h4>
+  <h5><%= number_to_currency p.price %></h5>
+  <%= simple_format p.text %>
+<% end %>
+

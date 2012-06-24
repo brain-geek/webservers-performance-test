@@ -60,7 +60,8 @@ module Perftest
     config.assets.version = '1.0'
 
     config.generators do |g|
-      g.fixture_replacement :fabrication, dir: "fabricators"
+      g.test_framework      :test_unit, fixture_replacement: :fabrication
+      g.fixture_replacement :fabrication, dir: "../fabricators"
     end
   end
 end

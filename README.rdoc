@@ -1,4 +1,4 @@
-== How to start web servers(port 8080):
+== How to start web servers(port 8080, production env):
 ====Unicorn 
 unicorn -p 8080 -E production
 ====Thin
@@ -12,3 +12,5 @@ rainbows -p 8080 -E production
 ab -e unicorn.csv -n 10000 http://127.0.0.1:8080/empty_page
 
 == Second benching(lot of ruby execution time):
+rake db:drop&&rake db:setup
+ab -e unicorn_slow.csv -n 1000 http://127.0.0.1:8080/slow_page

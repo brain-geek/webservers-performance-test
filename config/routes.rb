@@ -1,3 +1,3 @@
 Perftest::Application.routes.draw do
-  match ':controller', :action => 'index'
+  get ':controller', :action => 'index'
 end
