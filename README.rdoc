@@ -8,6 +8,7 @@ RAILS_ENV=production puma -p 8080 -t 1:1
 ====Rainbows
 rainbows -p 8080 -E production
 
-== First benching:
+== First benching(simplest page as possible):
 ab -e unicorn.csv -n 10000 http://127.0.0.1:8080/empty_page
 
+== Second benching(lot of ruby execution time):
